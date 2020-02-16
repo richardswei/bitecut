@@ -1,0 +1,39 @@
+
+[
+   
+    {
+      "name": "Specialty's Café & Bakery",
+      "address": "500 Howard St, San Francisco, CA 94105",
+      "city" : "San Francisco"
+    },
+    {
+      "name": "Spice Kit",
+      "address": "405 Howard St #310, San Francisco, CA 94105",
+      "city" : "San Francisco"
+    },
+    {
+      "name": "Sausalito Cafe",
+      "address": "100 1st St, San Francisco, CA 94105",
+      "city" : "San Francisco"
+    },
+    {
+      "name": "North India",
+      "address": "123 2nd St, San Francisco, CA 94105",
+      "city" : "San Francisco"
+    },
+    {
+      "name": "Lao Table",
+      "address": "149 2nd St, San Francisco, CA 94105",
+      "city" : "San Francisco"
+    },
+    {
+      "name": "Uno Dos Tacos",
+      "address": "595 Market St, San Francisco, CA 94105",
+      "city" : "San Francisco"
+    },
+    {
+      "name": "Panzon",
+      "address": "53 Stevenson St, San Francisco, CA 94105",
+      "city" : "San Francisco"
+    }
+]
