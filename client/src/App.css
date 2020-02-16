@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.gradient{
+  color: white;
+  background: -moz-linear-gradient(-45deg, #9239ff 0%, #9239ff 50%, #6d20ca 63%, #216aff 100%)
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: Raleway;
+  font-weight: bold
+}
+
+div, p{
+  font-family: Montserrat
+}
+
+
