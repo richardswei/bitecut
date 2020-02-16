@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 // import { Link, withRouter  } from "react-router-dom";
 import {Container,
-  ListGroup
+  ListGroup,
+  Row,
+  Col
 } from 'react-bootstrap'
 import data from "./places.json";
 import tt from '@tomtom-international/web-sdk-maps';
@@ -10,35 +12,66 @@ function getApiResponse(dbPath) {
   return places;
 }
 
-function getCoordinates(response) {
-}
+// function getCoordinatesFromTT(response) {
+// }
 
-function buildMap() {
+const getLocation = () => new Promise(
+  (resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        const location = {
+          lat:position.coords.latitude,
+          long:position.coords.longitude
+        };
+        console.log(location)
+        resolve(location); // Resolve with location. location can now be accessed in the .then method.
+      },
+      err => reject(err) // Reject with err. err can now be accessed in the .catch method.
+    );
+  }
+);
+
+/**
+ * then is called when the Promise is resolved
+ * catch is called when the Promise rejects or encounters an error.
+ */
+getLocation()
+    .then(location => console.log(location))
+    .catch(error => console.log(error));
+
+function buildMap(coords) {
   const productInfo = tt.setProductInfo('BiteCut', 'v0.1');
   const map = tt.map({
     key: "YWKYyuclIju4nZDJKYoXXgkuLECnJrsx",
     container: 'map',
-    center: [4.573040, 52.138950],
+    center: isNaN(coords.lat) || isNaN(coords.lon) ? [-122.40100, 37.78803] : [coords.lat, coords.lon],
     style: 'tomtom://vector/1/basic-main',
-    zoom: 9
+    zoom: 15
   });
 }
 
 
 class MapPage extends Component {
   componentDidMount() {
-    buildMap()
+    buildMap(getLocation)
   }
   render() { 
     return (
       <div>
         <Container>
-          <div className='map' id='map'></div>
+          <Row> 
+            <div className='map' id='map'></div>
+          </Row>
+        </Container>
+        <Container>
+
           <ListGroup>
             {
-              getApiResponse("./places.json").map((place) => {
-                return (<ListGroup.Item key={place.position.lat + place.position.lon}>
+              getApiResponse("./places.json").map((place,i) => {
+                return (<ListGroup.Item key={i}>
                   <strong>{place.name}</strong>
+                  <div>{place.address}</div>
+                  <div>{place.email}</div>
                 </ListGroup.Item>)
               })
             }
