@@ -9,4 +9,4 @@ from flask_login import login_user, login_required, logout_user, current_user
 
 @main.route('/', methods = ['GET','POST'])
 def index():
-    return render_template('login.html', current_user = current_user)
+    return render_template('index.html', current_user = current_user)
