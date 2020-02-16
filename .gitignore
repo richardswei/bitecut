@@ -1,0 +1,5 @@
+*.py[cod]
+venv*
+tmp
+__pycache__
+.DS_Store
