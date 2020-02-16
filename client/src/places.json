@@ -1,0 +1,20 @@
+[
+    {
+      "name": "Sushirrito",
+      "address": "59 New Montgomery St",
+      "city":"San Francisco",
+      "position": {
+        "lat": 37.78805,
+        "lon": -122.40106
+      }
+    },
+    {
+        "name": "The Plant Cafe Organic",
+        "address": "250 Montgomery St",
+        "city" : "San Francisco",
+        "position": {
+            "lat": 37.79158,
+            "lon": -122.40228
+        }
+    }
+]
