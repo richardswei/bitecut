@@ -4,26 +4,21 @@ BiteCut reduces restaurant food waste through selling discounted meals after rus
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install BiteCut.
 
 ```bash
-pip install foobar
+pip install BiteCut
 ```
 
 ## Usage
 
 ```python
-import foobar
+import BiteCut
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+BiteCut.pluralize('word') # returns 'words'
+BiteCut.pluralize('goose') # returns 'geese'
+BiteCut.singularize('phenomena') # returns 'phenomenon'
 ```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
