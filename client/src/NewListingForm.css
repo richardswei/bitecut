@@ -1,0 +1,30 @@
+.NewListingForm {
+
+}
+.NewListingForm-image {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+.NewListingForm-imageForm {
+
+}
+.NewListingForm-cancel {
+
+}
+.NewListingForm-label {
+  display: block;
+}
+.NewListingForm-textline {
+
+}
+.NewListingForm-money {
+  max-width: 100px;
+}
+.NewListingForm-percent {
+  max-width: 50px;
+  display: inline !important;
+}
+.NewListingForm-percent-sign {
+
+}
